@@ -8,15 +8,20 @@ import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-public class MainActivity extends AppCompatActivity  {
+import java.util.List;
 
+public class MainActivity extends AppCompatActivity  {
+    Listview listview;
+    List<Player> list={"???"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        listview=findViewById();
     //Todo reference listview
     //  Todo       ListView listView = findViewById();
     // Todo initialize custom adapter(MyAdapter) - using  method getPlayers, pay attention to constructor of MyAdapter
+        MyAdapter adapter=new MyAdapter(this,)
         //Todo  add custom adapter to listview
         //Todo listView.setAdapter(------);
 
