@@ -49,6 +49,7 @@ public class Player {
 
     public String getMainSport() {
         return mainSport;
+    }
 
     public int getImageResource() {
         return imageResource;
