@@ -20,35 +20,39 @@
         >
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:text="Name"
+        >
 
     </TextView>
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:text="Age"
+        >
 
     </TextView>
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        
-    </ImageView>
+
 
         <TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Worth"
+            >
 
-</TextView>
+        </TextView>
+
         <TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Skill"
+            >
 
-</TextView>
-        <TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+            </TextView>
 
-</TextView>
+
+
+
 </LinearLayout>
 
 
