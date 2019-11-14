@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -37,6 +38,11 @@ public class MyAdapter extends ArrayAdapter<Player> {
         age.setText(listOfPlayers.get(position).getAge());
         worth.setText(listOfPlayers.get(position).getWorth()+"");
         sport.setText(listOfPlayers.get(position).getMainSport());
+
+
+        //below is additional content -- Imageview
+        ImageView imageView = single_item_view.findViewById(R.id.personalhandsomeportrait);
+        imageView.setImageResource(listOfPlayers.get(position).getImageResource());
         return  single_item_view;
     }
 }
