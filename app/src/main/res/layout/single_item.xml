@@ -3,63 +3,53 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- Todo create ImageView and 4 textviews -->
-    <!--  Todo image on the left and text parallel to the image-->
-    <!-- Todo create ImageView and 4 textviews -->
-    <!--  Todo image on the left and text parallel to the image-->
-
-    <LinearLayout
+    <ImageView
+        android:id="@+id/personalhandsomeportrait"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:src="@drawable/pic"
+        >
+    </ImageView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
 
-        <ImageView
-            android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="">
+            android:textSize="30dp"
+            android:text="Name">
 
-        </ImageView>
+        </TextView>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/age"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Age"
+            android:textSize="30dp">
+        </TextView>
 
-            <TextView
-                android:id="@+id/one"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/worth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Worth"
+            android:textSize="30dp">
 
-            </TextView>
+        </TextView>
 
-            <TextView
-                android:id="@+id/two"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/sport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Skill"
+            android:textSize="30dp">
 
-            </TextView>
-
-            <TextView
-                android:id="@+id/three"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-            </TextView>
-
-            <TextView
-                android:id="@+id/four"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-            </TextView>
-
-            <TextView
-                android:id="@+id/five"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-            </TextView>
-            
-        </LinearLayout>
+        </TextView>
 
     </LinearLayout>
 
