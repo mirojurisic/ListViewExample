@@ -8,6 +8,7 @@ import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity  {
@@ -18,12 +19,13 @@ public class MainActivity extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         listView=findViewById(R.id.listview);
-        List<Player> list={};
+        ArrayList<Player> list=new ArrayList<Player>();
     //Todo reference listview
     //  Todo       ListView listView = findViewById();
     // Todo initialize custom adapter(MyAdapter) - using  method getPlayers, pay attention to constructor of MyAdapter
         MyAdapter adapter=new MyAdapter(this,R.id.listview,list);
         //Todo  add custom adapter to listview
+        
         //Todo listView.setAdapter(------);
 
     }
