@@ -22,3 +22,10 @@ Students that cannot be in the same group
 
 Alan, Jimmy, Jesse, David, Sunny.
 and Ronal and Colin cannot form a pair.
+
+
+NEW assignment:
+
+1) add onItemClickListener for list item,
+click will create an intent that opens a webpage of the playes(wiki, profile,anything related to the player)
+ hint: need to add new field to player
