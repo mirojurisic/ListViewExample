@@ -24,15 +24,19 @@ public class MainActivity extends AppCompatActivity  {
         //Todo  add custom adapter to listview
         //Todo listView.setAdapter(------);
         ListView listView = findViewById(R.id.listview);
-        ArrayAdapter<Player> MyAdapter = new ArrayAdapter<Player>(this, R.layout.activity_main,getPlayers());
+        ArrayAdapter<Player> MyAdapter = new ArrayAdapter<Player>(this, R.layout.activity_main, getPlayers());
         listView.setAdapter(MyAdapter);
     }
-    //Todo  create a method getPlayers() that will create an array of 15 players and return the list of type List<Player>
-    // choose successful sportsmen from different sports, make sure to fill Player class before starting
+
     public List<Player> getPlayers(){
+        String sport[] = new String[] {"golf", "tennis", "badminton", "soccer", "football", "basketball", "competitive gaming", "hockey", "synchronized swimming", "track", "cross country", "gymnastics", "ice hockey", "figure skating", "volleyball"};
+        String name[] = new String[] {"Mr. Miro", "Alan", "David", "Alex", "Jimmy", "Sunny", "Jesse", "Ronal", "Colin", "Jarvis", "Cindy", "Cathy", "Hedwig", "Quinn", "Philip"};
+        int imageResource[] = new int[] {};
+        int worth[] = new int[] {15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
+        int age[] = new int[] {50, 49, 48, 47, 46, 45, 44, 43, 42, 41, 40, 39, 38, 37, 36};
         ArrayList<Player> list = new ArrayList<Player>();
-        for(int i = 0;i<15;i++){
-            list.add(new Player("asdf",1,1.0,"sex",i));
+        for(int i = 0; i < 15; i++){
+            list.add(new Player(name[i],1,1.0, sport[i], imageResource[i]));
         }
         return list;
     }
