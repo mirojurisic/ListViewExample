@@ -18,11 +18,6 @@ public class MainActivity extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-    //Todo reference listview
-    //  Todo       ListView listView = findViewById();
-    // Todo initialize custom adapter(MyAdapter) - using  method getPlayers, pay attention to constructor of MyAdapter
-        //Todo  add custom adapter to listview
-        //Todo listView.setAdapter(------);
         ListView listView = findViewById(R.id.listview);
         ArrayAdapter<Player> MyAdapter = new ArrayAdapter<Player>(this, R.layout.activity_main, getPlayers());
         listView.setAdapter(MyAdapter);
@@ -31,7 +26,7 @@ public class MainActivity extends AppCompatActivity  {
     public List<Player> getPlayers(){
         String sport[] = new String[] {"golf", "tennis", "badminton", "soccer", "football", "basketball", "competitive gaming", "hockey", "synchronized swimming", "track", "cross country", "gymnastics", "ice hockey", "figure skating", "volleyball"};
         String name[] = new String[] {"Mr. Miro", "Alan", "David", "Alex", "Jimmy", "Sunny", "Jesse", "Ronal", "Colin", "Jarvis", "Cindy", "Cathy", "Hedwig", "Quinn", "Philip"};
-        int imageResource[] = new int[] {};
+        int imageResource[] = new int[] {R.drawable.a, R.drawable.b, R.drawable.c, R.drawable.d, R.drawable.e, R.drawable.f, R.drawable.g, R.drawable.h, R.drawable.i, R.drawable.j, R.drawable.k, R.drawable.l, R.drawable.m, R.drawable.n, R.drawable.o};
         int worth[] = new int[] {15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
         int age[] = new int[] {50, 49, 48, 47, 46, 45, 44, 43, 42, 41, 40, 39, 38, 37, 36};
         ArrayList<Player> list = new ArrayList<Player>();
