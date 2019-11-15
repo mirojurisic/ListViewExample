@@ -35,7 +35,7 @@ public class MyAdapter extends ArrayAdapter<Player> {
         TextView worth = single_item_view.findViewById(R.id.worth);
         TextView sport = single_item_view.findViewById(R.id.sport);
         name.setText(listOfPlayers.get(position).getName());
-        age.setText(listOfPlayers.get(position).getAge());
+        age.setText(listOfPlayers.get(position).getAge()+"");
         worth.setText(listOfPlayers.get(position).getWorth()+"");
         sport.setText(listOfPlayers.get(position).getMainSport());
 
