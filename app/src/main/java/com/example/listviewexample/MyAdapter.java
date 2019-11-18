@@ -32,9 +32,9 @@ public class MyAdapter extends ArrayAdapter<Player> {
         // get references to views in single_item.xml , for example
 
         TextView textView1 = single_item_view.findViewById(R.id.textView1);
-        TextView textView2=single_item_view.findViewById(R.id.textView2);
-        TextView textView3=single_item_view.findViewById(R.id.textView3);
-        TextView textView4=single_item_view.findViewById(R.id.textView4);
+        TextView textView2 = single_item_view.findViewById(R.id.textView2);
+        TextView textView3 = single_item_view.findViewById(R.id.textView3);
+        TextView textView4 = single_item_view.findViewById(R.id.textView4);
         return  single_item_view;
     }
 }
