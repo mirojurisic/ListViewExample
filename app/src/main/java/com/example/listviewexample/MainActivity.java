@@ -22,6 +22,12 @@ public class MainActivity extends AppCompatActivity  {
         getPlayers();
         MyAdapter myAdapter = new MyAdapter(this, 0, list);
         listView.setAdapter(myAdapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+            }
+        });
     }
 
     public void getPlayers(){
