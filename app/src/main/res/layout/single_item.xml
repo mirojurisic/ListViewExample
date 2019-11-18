@@ -5,7 +5,7 @@
 
     <ImageView
         android:id="@+id/personalhandsomeportrait"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:src="@drawable/pic"
         >
