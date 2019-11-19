@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity  {
         list.add(new Player("David Robert Joseph Beckham",44,1291800.00,"football",R.drawable.beckham));
         list.add(new Player("Hanyu Yuzulu",24,500000,"figure skating",R.drawable.hanyu));
         list.add(new Player("Zhang Jike",31,500000,"Ping-pong",R.drawable.zhang));
+//        list.add(new Player("Lin Dan",))
 
     }
     // choose successful sportsmen from different sports, make sure to fill Player class before starting
