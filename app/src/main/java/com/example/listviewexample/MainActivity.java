@@ -9,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity  {
@@ -19,14 +20,12 @@ public class MainActivity extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         listView=findViewById(R.id.listview);
-        ArrayList<Player> list=new ArrayList<Player>();
-    //Todo reference listview
-    //  Todo       ListView listView = findViewById();
-    // Todo initialize custom adapter(MyAdapter) - using  method getPlayers, pay attention to constructor of MyAdapter
+        List<Player> list= getPlayers();
+        //Todo reference listview
+        // Todo initialize custom adapter(MyAdapter) - using  method getPlayers, pay attention to constructor of MyAdapter
         MyAdapter adapter=new MyAdapter(this,R.id.listview,list);
-        //Todo  add custom adapter to listview
         listView.setAdapter(adapter);
-        //Todo listView.setAdapter(------);
+
 
     }
     //Todo  create a method getPlayers() that will create an array of 15 players and return the list of type List<Player>
@@ -42,4 +41,16 @@ public class MainActivity extends AppCompatActivity  {
     // choose successful sportsmen from different sports, make sure to fill Player class before starting
 
 
+    public List getPlayers()
+    {
+        List<Player> list = Arrays.asList(new Player[]{
+                new Player("Doris", 16, 100000, "Basketball", R.drawable.member_placeholder_female),
+                new Player("LeBron James", 34, 40000000, "Basketball", R.drawable.team_man_placeholder),
+                new Player("Kevin Durant", 31, 30000000, "Basketball", R.drawable.team_man_placeholder),
+                new Player("Kyrie Irving", 27, 20100000, "Basketball", R.drawable.team_man_placeholder),
+                new Player("James Harden", 30, 28300000, "Basketball", R.drawable.team_man_placeholder),
+                new Player("Stephen Curry", 31, 37460000, "Basketball", R.drawable.team_man_placeholder)
+        });
+        return list;
+    }
 }
