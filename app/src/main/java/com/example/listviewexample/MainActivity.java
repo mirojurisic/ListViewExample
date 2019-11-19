@@ -2,6 +2,7 @@ package com.example.listviewexample;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.net.wifi.p2p.WifiP2pManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Adapter;
@@ -42,6 +43,11 @@ public class MainActivity extends AppCompatActivity  {
                 new Player("David Robert Joseph Beckham",44,1291800.00,"football",R.drawable.beckham),
                 new Player("Hanyu Yuzulu",24,500000,"figure skating",R.drawable.hanyu),
                 new Player("Zhang Jike",31,500000,"Ping-pong",R.drawable.zhang),
+                new Player("Lin Dan",36,10000000,"Badminton",R.drawable.lin),
+                new Player("Lee Chong Wei",37,5000000,"Badminton",R.drawable.lee),
+                new Player("Lee Sang-hyeok (Faker)",23,890000,"E-sports (LOL)",R.drawable.faker),
+                new Player("Fu Yuanhui",23,5000000,"Swimming",R.drawable.fu),
+                new Player("Lang Ping",58,5000000,"Volleyball",R.drawable.lang)
         });
         return list;
     }
