@@ -28,18 +28,6 @@ public class MainActivity extends AppCompatActivity  {
 
 
     }
-    //Todo  create a method getPlayers() that will create an array of 15 players and return the list of type List<Player>
-    public List<Player> getPlayers(ArrayList<Player> list)
-    {
-        list.add(new Player("Lionel Messi",32,44224400.00,"football",R.drawable.mesi));
-        list.add(new Player("David Robert Joseph Beckham",44,1291800.00,"football",R.drawable.beckham));
-        list.add(new Player("Hanyu Yuzulu",24,500000,"figure skating",R.drawable.hanyu));
-        list.add(new Player("Zhang Jike",31,500000,"Ping-pong",R.drawable.zhang));
-//        list.add(new Player("Lin Dan",))
-
-    }
-    // choose successful sportsmen from different sports, make sure to fill Player class before starting
-
 
     public List getPlayers()
     {
@@ -49,7 +37,11 @@ public class MainActivity extends AppCompatActivity  {
                 new Player("Kevin Durant", 31, 30000000, "Basketball", R.drawable.team_man_placeholder),
                 new Player("Kyrie Irving", 27, 20100000, "Basketball", R.drawable.team_man_placeholder),
                 new Player("James Harden", 30, 28300000, "Basketball", R.drawable.team_man_placeholder),
-                new Player("Stephen Curry", 31, 37460000, "Basketball", R.drawable.team_man_placeholder)
+                new Player("Stephen Curry", 31, 37460000, "Basketball", R.drawable.team_man_placeholder),
+                new Player("Lionel Messi",32,44224400.00,"football",R.drawable.mesi),
+                new Player("David Robert Joseph Beckham",44,1291800.00,"football",R.drawable.beckham),
+                new Player("Hanyu Yuzulu",24,500000,"figure skating",R.drawable.hanyu),
+                new Player("Zhang Jike",31,500000,"Ping-pong",R.drawable.zhang),
         });
         return list;
     }
