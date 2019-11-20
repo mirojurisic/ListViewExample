@@ -2,6 +2,7 @@ package com.example.listviewexample;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Adapter;
@@ -44,5 +45,12 @@ public class MainActivity extends AppCompatActivity  {
                 new Player("Zhang Jike",31,500000,"Ping-pong",R.drawable.zhang),
         });
         return list;
+    }
+
+    public void startImageViewerActivity(int imageResource)
+    {
+        Intent intent = new Intent(this, ImageViewerActivity.class);
+        intent.putExtra("image", imageResource);
+        startActivity(intent);
     }
 }
