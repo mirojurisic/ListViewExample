@@ -16,13 +16,15 @@ import java.util.List;
 
 public class MyAdapter extends ArrayAdapter<Player> {
     List<Player> listOfPlayers;
+    Context context;
     public MyAdapter(@NonNull Context context, int resource, @NonNull List<Player> objects) {
         super(context, resource, objects);
         listOfPlayers = objects;
+        this.context = context;
     }
 
     @NonNull
-    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent, final Context context) {
+    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         View single_item_view = convertView;
         //Using this inflated view, we can get the access to the various UI widgets present in the row item XML file.
         LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -35,7 +37,7 @@ public class MyAdapter extends ArrayAdapter<Player> {
         TextView textView2 = single_item_view.findViewById(R.id.textView2);
         TextView textView3 = single_item_view.findViewById(R.id.textView3);
         TextView textView4 = single_item_view.findViewById(R.id.textView4);
-        final ImageView imageView = single_item_view.findViewById(R.id.imageView);
+        ImageView imageView = single_item_view.findViewById(R.id.imageView);
         textView1.setText(player.getName());
         textView2.setText("Age: " + player.getAge());
         textView3.setText(player.getMainSport());
