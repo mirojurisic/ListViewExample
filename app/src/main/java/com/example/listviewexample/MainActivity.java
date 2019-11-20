@@ -3,6 +3,7 @@ package com.example.listviewexample;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.net.wifi.p2p.WifiP2pManager;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Adapter;
@@ -50,5 +51,12 @@ public class MainActivity extends AppCompatActivity  {
                 new Player("Lang Ping",58,5000000,"Volleyball",R.drawable.lang)
         });
         return list;
+    }
+
+    public void startImageViewerActivity(int imageResource)
+    {
+        Intent intent = new Intent(this, ImageViewerActivity.class);
+        intent.putExtra("image", imageResource);
+        startActivity(intent);
     }
 }

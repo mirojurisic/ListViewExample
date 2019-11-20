@@ -1,6 +1,7 @@
 package com.example.listviewexample;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,13 +16,14 @@ import java.util.List;
 
 public class MyAdapter extends ArrayAdapter<Player> {
     List<Player> listOfPlayers;
+    Context context;
     public MyAdapter(@NonNull Context context, int resource, @NonNull List<Player> objects) {
         super(context, resource, objects);
         listOfPlayers = objects;
+        this.context = context;
     }
 
     @NonNull
-    @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         View single_item_view = convertView;
         //Using this inflated view, we can get the access to the various UI widgets present in the row item XML file.
@@ -29,7 +31,7 @@ public class MyAdapter extends ArrayAdapter<Player> {
         if (single_item_view == null)
             single_item_view = inflater.inflate(R.layout.single_item, null);
         //Todo get single player using position and listOfPlayers
-        Player player = listOfPlayers.get(position);
+        final Player player = listOfPlayers.get(position);
 
         TextView textView1 = single_item_view.findViewById(R.id.textView1);
         TextView textView2 = single_item_view.findViewById(R.id.textView2);
@@ -41,6 +43,20 @@ public class MyAdapter extends ArrayAdapter<Player> {
         textView3.setText(player.getMainSport());
         textView4.setText("Worth: " + player.getWorth());
         imageView.setImageResource(player.getImageResource());
+
+        //Opens ImageViewerActivity onClick listener.
+        imageView.setClickable(true);
+        imageView.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                if (context instanceof MainActivity)
+                {
+                    ((MainActivity) context).startImageViewerActivity(player.getImageResource());
+                }
+            }
+        });
 
         return  single_item_view;
     }
